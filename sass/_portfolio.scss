@@ -115,3 +115,25 @@
 		}
 	}
 }
+
+.input{
+	width: 200px;
+	height: 50px;
+	background: #fff;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: #000;
+}
+
+.button{
+	width: 200px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	&__span{
+		color: #fff;
+		font-size: 20px;
+	}
+}
