@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'Proxima Nova Regular';
+	font-display: auto;
+	src: url('../fonts/ProximaNova-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Proxima Nova Light';
+	font-display: auto;
+	src: url('../fonts/ProximaNova-Light.woff') format('woff');
+}
+@mixin font-regular {
+	font-family: 'Proxima Nova Regular', sans-serif;
+}
+@mixin font-light {
+	font-family: 'Proxima Nova Light', sans-serif;
+}

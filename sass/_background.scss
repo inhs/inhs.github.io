@@ -1,0 +1,25 @@
+.background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	&::after, &::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	&::after {		
+		margin-left: -45rem;
+		box-shadow: 0 0 25rem 25rem $redColor;
+		opacity: .3;
+	}
+	&::before {	
+		margin-left: 40rem;
+		box-shadow: 0 0 25rem 35rem $blueColor;
+		opacity: .3;
+	}
+}
