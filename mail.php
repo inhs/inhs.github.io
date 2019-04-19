@@ -1,8 +1,8 @@
 <?php
 
 $val = $_POST["val"];
-
-echo $val;
+mail('anthem.jaff@gmail.com', "Tema hui", $val);
+echo "Your query is complete";
 
 
 ?>
