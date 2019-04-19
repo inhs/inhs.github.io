@@ -87,15 +87,15 @@ $(".project").on('mouseleave', function () {
 })
 
 
-$('.button').click(function(){
-	$.ajax({
-		method: "POST",
-		url: "mail.php",
-		data: {
-			val : $('.input').val()
-		},
-		success: function(response){
-			console.log(response)
-		}
-	})
-})
+// $('.button').click(function(){
+// 	$.ajax({
+// 		method: "POST",
+// 		url: "mail.php",
+// 		data: {
+// 			val : $('.input').val()
+// 		},
+// 		success: function(response){
+// 			console.log(response)
+// 		}
+// 	})
+// })
