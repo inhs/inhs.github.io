@@ -20,16 +20,6 @@ setTimeout(function () {
 		$('.JSheaderBottomLine').removeClass('JStrans');
 	}, 1000)
 }, 600)
-setTimeout(function () {
-	$('.header__button').addClass('JStrans');
-	$('.header__button').addClass('fadeUp');
-	$('.header__button').css({
-		'opacity': '.5'
-	});
-	setTimeout(function () {
-		$('.header__button').removeClass('JStrans');
-	}, 1000)
-}, 600)
 // Scroll parallax
 $(window).on('scroll', function () {
 	var scroll = $(this).scrollTop();
@@ -44,9 +34,6 @@ $(window).on('scroll', function () {
 			setTimeout(function(){
 				$('.second-project').addClass('fadeUp');
 			},600);
-			setTimeout(function(){
-				$('.third-project').addClass('fadeUp');
-			},900)
 		}
 	});
 	$('.JSheaderTopLine').css({
