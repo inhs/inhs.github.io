@@ -1,0 +1,39 @@
+@mixin media($w) {
+	@media screen and (max-width: $w) {
+		@content
+	}
+}
+* {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-decoration: none;
+	outline: none;
+	line-height: 1;
+	border: none;
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+	letter-spacing: unset;
+	font-weight: 400;
+	font-family: 'Akrobat Regular', sans-serif;
+	color: inherit;
+	box-sizing: content-box;
+	user-select: none;
+}
+html {
+	font-size: 10px;
+	// font-size: calc(100vw/192);
+	// @include media(1200px) {
+	// 	font-size:	calc(100vw/130);
+	// }
+	// @include media(768px) {
+	// 	font-size:	calc(100vw/90);
+	// }
+	// @include media(500px) {
+	// 	font-size:	calc(100vw/60);
+	// }
+}
+p, a, span, h1, h2, h3, h4, h5, h6 {
+	font-size: 20px;
+};

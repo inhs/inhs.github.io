@@ -1,0 +1,10 @@
+$('.input__button').click(function(){
+	$(this).addClass('active');
+	$('.popup').addClass('active');
+	$('.mask').addClass('active');
+});
+$('.popup__close').click(function(){
+	$('.input__button').removeClass('active');
+	$('.popup').removeClass('active');
+	$('.mask').removeClass('active');
+});

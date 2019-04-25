@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'Akrobat Regular';
+	font-display: auto;
+	src: url('../fonts/Akrobat-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Akrobat SemiBold';
+	font-display: auto;
+	src: url('../fonts/Akrobat-SemiBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Chocolate';
+	font-display: auto;
+	src: url('../fonts/ofont.ru_Chocolate.ttf') format('truetype');
+}
+@mixin Regular {
+	font-family: 'Akrobat Regular', sans-serif;
+}
+@mixin Medium {
+	font-family: 'Akrobat SemiBold', sans-serif;
+}
+@mixin Bold {
+	font-family: 'Chocolate', sans-serif;
+}
