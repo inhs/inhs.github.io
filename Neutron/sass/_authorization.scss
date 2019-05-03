@@ -1,0 +1,24 @@
+.authorization {
+	display: flex;
+	align-items: center;
+	&__items {
+		display: flex;
+		align-items: center;
+		margin-left: 1.2rem;
+	}
+	&__icon {
+		width: 1.5rem;
+	}
+	&__text {
+		@include Bold;
+		font-size: 1.6rem;
+		margin-left: .8rem;
+		white-space: nowrap;
+		@include media(500px) {
+			font-size: 2.2rem;
+		}
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,20 @@
+.bg-elem {
+	width: 55rem;
+	position: absolute;
+	bottom: 0;
+	right: 40rem;
+	z-index: 0;
+	@include media(1200px) {
+		right: auto;
+		left: 0;
+	}
+	@include media(768px) {
+		right: 0;
+		left: auto;
+	}
+	@include media(500px) {
+		position: relative;
+		width: 100%;
+		margin-bottom: 3rem;
+	}
+}

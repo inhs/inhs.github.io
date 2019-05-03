@@ -1,0 +1,32 @@
+.mobileMenu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	transform: translateX(100%);
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	transition: .5s cubic-bezier(0.93, 0.03, 0.25, 1.04);
+	z-index: 99;
+	&__wrap {
+		width: calc(100% - 3rem);
+		height: calc(100% - 8.5rem);
+		padding-top: 8.5rem;
+		padding-right: 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-end;
+	}
+	&__closeBtn {
+		width: 3rem;
+		margin-bottom: 3rem;
+		transition: .3s;
+		&:active {
+			transform: scale(.9);
+		}
+	}
+	&._opened {
+		transform: translateX(0);
+	}
+}

@@ -1,0 +1,49 @@
+.footerNav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	@include media(500px) {
+		align-items: flex-start;
+	}
+	&__name {
+		@include Bold;
+		font-size: 1.8rem;
+		color: $textDarkColor;
+		margin-bottom: 2.5rem;
+		@include media(500px) {
+			font-size: 2.4rem;
+		}
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		@include media(500px) {
+			align-items: flex-start;
+		}
+	}
+	&__items {
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+	&__link {
+		font-size: 1.4rem;
+		color: $textDarkColor;
+		opacity: .8;
+		transition: .3s;
+		white-space: nowrap;
+		@include media(500px) {
+			font-size: 2rem;
+		}
+		&:hover {
+			opacity: 1;
+			@include media(1024px) {
+				opacity: .8;
+				&:active {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

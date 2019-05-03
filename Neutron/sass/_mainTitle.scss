@@ -1,0 +1,10 @@
+.mainTitle {
+	font-size: 6rem;
+	color: $textDarkColor;
+	&._big-title {
+		@include SemiBold;
+	}
+	@include media(500px) {
+		font-size: 8rem;
+	}
+}

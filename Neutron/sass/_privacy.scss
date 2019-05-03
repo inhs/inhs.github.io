@@ -1,0 +1,69 @@
+.privacy {
+	display: flex;
+	justify-content: center;
+	background: #f1f1f1;
+	background: linear-gradient(180deg, #f1f1f1, #fff);
+	&__container {
+		width: 98rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 8rem 0;
+		@include media(768px) {
+			width: 90vw;
+		}
+		@include media(500px) {
+			text-align: center;
+		}
+	}
+	&__line {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 10rem;
+		&::after {
+			content: '';
+			position: absolute;
+			right: -20rem;
+			bottom: -6rem;
+			width: 300%;
+			height: 1px;
+			background: #000;
+			opacity: .2;
+			@include media(768px) {
+				width: 100%;
+				right: 0;
+			}
+		}
+	}
+	&__line-items {
+		margin: 0 2rem;
+		@include media(500px) {
+			margin: 2rem;
+		}
+	}
+	&__smallinfo {
+		position: relative;
+		font-size: 1.4rem;
+		color: $textLightColor;
+		margin-left: auto;
+		margin-bottom: 2rem;
+		@include media(500px) {
+			font-size: 2rem;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			right: -1.3rem;
+			top: -4rem;
+			width: 1px;
+			height: 57rem;
+			background: #000;
+			opacity: .2;
+			@include media(768px) {
+				display: none;
+			}
+		}
+	}
+}

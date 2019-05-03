@@ -1,0 +1,7 @@
+.globalWrap {
+	filter: blur(0);
+	transition: 1s;
+	&._active {
+		filter: blur(5px);
+	}
+}

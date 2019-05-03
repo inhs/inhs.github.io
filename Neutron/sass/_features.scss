@@ -1,0 +1,153 @@
+.features {
+	display: flex;
+	justify-content: center;
+	&__container {
+		width: 125rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 11rem;
+		padding-bottom: 3rem;
+		@include media(1200px) {
+			width: 90vw;
+		}
+		@include media(768px) {
+			padding-top: 3rem;
+		}
+	}
+	&__topLine {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 13rem;
+		@include media(768px) {
+			margin-bottom: 0;
+		}
+	}
+	&__bottomLine {
+		position: relative;
+		text-align: right;
+		display: flex;
+		flex-direction: column;
+		width: 62rem;
+		margin-left: -30rem;
+		margin-bottom: 3rem;
+		@include media(768px) {
+			margin-left: 0;
+		}
+		@include media(500px) {
+			width: 100%;
+		} 
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: -6rem;
+			width: 200%;
+			height: 1px;
+			background: #000;
+			opacity: .2;
+			@include media(500px) {
+				width: 100%;
+			} 
+		}
+	}
+	&__button {
+		background: #fff;	
+		border-radius: 3.6rem;
+		padding: 2.3rem 3rem;
+		margin-right: -40rem;
+		border: 1px solid rgba(0,0,0,.2);
+		font-size: 1.6rem;
+		color: $textLightColor;
+		transition: .3s;
+		z-index: 1;
+		@include media(500px) {
+			margin-right: 0;
+			font-size: 2rem;
+		} 
+		&:hover {
+			cursor: pointer;
+			border: 1px solid rgba(0,0,0,.4);
+			color: $textDarkColor;
+			@include media(1024px) {
+				&:hover {
+					border: 1px solid rgba(0,0,0,.2);
+					color: $textLightColor;
+				}
+				&:active {
+					border: 1px solid rgba(0,0,0,.4);
+					color: $textDarkColor;
+				}
+			}
+		}
+	}
+	&__text {
+		font-size: 2.4rem;
+		color: $textLightColor;
+		@include media(500px) {
+			font-size: 2.5rem;
+		}
+		&._modify {
+			font-size: 2.4rem;
+			color: $textRedColor;
+			@include media(500px) {
+				font-size: 2.5rem;
+			}
+		}
+	}
+	&__items {
+		flex-basis: 30%;
+		position: relative;
+		@include media(768px) {
+			flex-basis: 100%;
+			margin-bottom: 3rem;
+		}
+		&:first-child {
+			&::after {
+				content: '';
+				position: absolute;
+				right: -2rem;
+				top: -13rem;
+				width: 1px;
+				height: 20rem;
+				background: #000;
+				opacity: .2;
+				@include media(768px) {
+					display: none;
+				}
+			}
+		}
+		&:nth-child(2) {
+			&::after {
+				content: '';
+				position: absolute;
+				right: -2rem;
+				top: 0;
+				width: 1px;
+				height: 49rem;
+				background: #000;
+				opacity: .2;
+				@include media(768px) {
+					display: none;
+				}
+			}
+		}
+		&:last-child {
+			&::after {
+				content: '';
+				position: absolute;
+				right: -20rem;
+				top: 0;
+				width: 20rem;
+				height: 1px;
+				background: #000;
+				opacity: .2;
+				@include media(1200px) {
+					display: none;
+				}
+			}
+		}
+	}
+	
+}

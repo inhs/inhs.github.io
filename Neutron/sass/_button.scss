@@ -1,0 +1,57 @@
+.button {
+	@include Bold;
+	font-size: 1.6rem;
+	color: #fff;
+	background: linear-gradient(35deg, #636b91, #5f2f6a);
+	box-shadow: 0px 7px 9px 0px rgba(142, 117, 222, 0.15);
+	border-radius: 4rem;
+	padding: 2rem 6.4rem;
+	transition: .3s;
+	letter-spacing: .1rem;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	@include media(500px) {
+		font-size: 2rem;
+	}
+	&._smallBtn {
+		background: linear-gradient(150deg, #582c7e 0%, #6276cc 90%);
+		padding: 1.3rem 2rem;
+	}
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0px 7px 9px 3px rgba(142, 117, 222, 0.55);
+		@include media(1024px) {
+			box-shadow: 0px 7px 9px 0px rgba(142, 117, 222, 0.15);
+			&:active {
+				box-shadow: 0px 7px 9px 3px rgba(142, 117, 222, 0.55);
+			}
+		}
+	}
+	&._icon-btn {
+		padding: 1.3rem;
+		background: #5f2f6a;
+	}
+	&__icon {
+		width: 2.2rem;
+		&._mgr {
+			margin-right: 1rem;
+		}
+	}
+	&._modifyBlueBtn {
+		background: linear-gradient(90deg, #81b7ff, #547bfc);
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0px 7px 9px 3px rgba(69, 209, 252, 0.55);
+			@include media(1024px) {
+				box-shadow: 0px 7px 9px 0px rgba(142, 117, 222, 0.15);
+				&:active {
+					box-shadow: 0px 7px 9px 3px rgba(69, 209, 252, 0.55);
+				}
+			}
+		}
+	}
+	&._formRegistBtn {
+		margin: 0 auto;
+	}
+}

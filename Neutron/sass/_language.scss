@@ -1,0 +1,67 @@
+.language {
+	display: flex;
+	align-items: center;
+
+	&__items {
+		margin-right: 1rem;
+
+		&:not(:last-child) {
+			&::after {
+				content: '/';
+				font-size: 1.4rem;
+				color: $textLightColor;
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	&__link {
+		font-size: 1.4rem;
+		color: $textLightColor;
+		position: relative;
+		@include media(500px) {
+			font-size: 1.8rem;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			width: 0;
+			background: $textLightColor;
+			transition: .3s;
+		}
+
+		&:hover {
+			&::after {
+				width: 100%;
+			}
+
+			@include media (1024px) {
+				&::after {
+					width: 0;
+				}
+
+				&:active {
+					&::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&._current-language {
+			@include Bold;
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 1px;
+				width: 100%;
+				background: $textLightColor;
+			}
+		}
+	}
+}

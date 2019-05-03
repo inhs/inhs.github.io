@@ -1,0 +1,19 @@
+.quote {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	&__text {
+		font-family: 'Malaga Regular', sans-serif;
+		font-size: 2.4rem;
+		line-height: 3rem;
+		margin-bottom: .5rem;
+	}
+	&__author {
+		font-family: 'Malaga Regular', sans-serif;
+		font-size: 1.6rem;
+		color: $textLightColor;
+		@include media(500px) {
+			font-size: 2rem;
+		}
+	}
+}

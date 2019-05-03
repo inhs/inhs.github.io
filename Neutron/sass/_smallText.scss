@@ -1,0 +1,12 @@
+.smallText {
+	font-size: 1.6rem;
+	color: $textLightColor;
+	line-height: 2.2rem;
+	z-index: 1;
+	@include media(500px) {
+		font-size: 2.2rem;
+	}
+	&._mgb {
+		margin-bottom: 3rem;
+	}
+}

@@ -1,0 +1,25 @@
+.contacts {
+	&__items {
+		margin-bottom: 2rem;
+		display: flex;
+	}
+	&__name {
+		font-size: 1.4rem;
+		color: $textLightColor;
+		margin-right: .5rem;
+		@include media(500px) {
+			font-size: 2rem;
+		}
+	}
+	&__mail {
+		font-size: 1.4rem;
+		color: $textDarkColor;
+		@include Bold;
+		@include media(500px) {
+			font-size: 2rem;
+		}
+		&._undr {
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,34 @@
+@font-face {
+	font-family: 'TitiliumWeb Regular';
+	font-display: auto;
+	src: url('../fonts/TitilliumWeb-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'TitiliumWeb SemiBold';
+	font-display: auto;
+	src: url('../fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'TitiliumWeb Bold';
+	font-display: auto;
+	src: url('../fonts/TitilliumWeb-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'MinionPro';
+	font-display: auto;
+	src: url('../fonts/MinionPro-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Malaga Regular';
+	font-display: auto;
+	src: url('../fonts/subset-MalagaOT-RegItalic.woff') format('woff'), url('../fonts/subset-MalagaOT-RegItalic.woff2') format('woff2');
+}
+@mixin Regular {
+	font-family: 'TitiliumWeb Regular', sans-serif;
+}
+@mixin SemiBold {
+	font-family: 'TitiliumWeb SemiBold', sans-serif;
+}
+@mixin Bold {
+	font-family: 'TitiliumWeb Bold', sans-serif;
+}

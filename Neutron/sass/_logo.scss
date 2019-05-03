@@ -1,0 +1,16 @@
+.logo {
+	@include Bold;
+	font-size: 3rem;
+	color: $textLightColor;
+	@include media(500px) {
+		font-size: 4rem;
+	}
+	&__modify {
+		@include Bold;
+		color: $textPurpleColor;
+		font-size: 3rem;
+		@include media(500px) {
+			font-size: 4rem;
+		}
+	}
+}
