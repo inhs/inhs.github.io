@@ -285,6 +285,11 @@ html {
 }
 
 .project.second-project {
+  background: url("../img/work-2-browser.png") no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.project.thied-project {
   background: url("../img/work-3-browser.png") no-repeat;
   background-position: center center;
   background-size: cover;
