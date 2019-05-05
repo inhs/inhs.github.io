@@ -78,7 +78,7 @@
 					<p class="description__text">
 						Адаптивная и кроссбраузерная <br> верстка лендинга
 					</p>
-					<a href="inhs.github.io/Neutron/" class="description__link">
+					<a href="inhs.github.io/Neutron" class="description__link">
 						Перейти на сайт
 					</a>
 				</div>
