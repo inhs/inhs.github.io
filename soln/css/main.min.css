@@ -2917,7 +2917,7 @@ h2 {
 
 	.layout {
 		height: 654px;
-		padding-bottom: 28px;
+		/* padding-bottom: 28px; */
 		padding-top: 31px;
 	}
 
@@ -2931,7 +2931,7 @@ h2 {
 	}
 
 	.advantages {
-		padding-bottom: 37px;
+		/* padding-bottom: 37px; */
 		padding-top: 40px;
 	}
 
@@ -2969,7 +2969,7 @@ h2 {
 	}
 
 	.reviews {
-		padding-bottom: 30px;
+		padding-bottom: 60px;
 		padding-top: 30px;
 	}
 
