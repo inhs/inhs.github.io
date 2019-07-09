@@ -4079,6 +4079,12 @@ h2 {
 	flex-direction: column;
 	align-items: center;
 }
+.tour__images__section--small._nmb {
+	display: none;
+}
+.tour__images__section--big._fullWidth {
+	width: 100%;
+}
 @media (max-width: 1359px) {
 	.tour__images__section--small {
 		margin-bottom: 0;
