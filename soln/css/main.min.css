@@ -3454,7 +3454,7 @@ h2 {
 		top: 500px;
 	}
 	.hero {
-		/* padding-bottom: 370px; */
+		padding-bottom: 370px;
 	}
 	.form__wrap {
 		padding: 23px 23px 36px;
@@ -4033,4 +4033,9 @@ h2 {
 }
 .form__input._warning {
 	border: 1px solid red;
+}
+@media (max-width: 640px) {
+	.hero {
+		padding-bottom: 70px;
+	}
 }
