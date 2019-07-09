@@ -8,7 +8,7 @@ wpcf7Elm.addEventListener('wpcf7submit', function (event) {
 }, false);
 
 window.onload = function () {
-	$('input[type=tel]').mask('+7 (000) 000-00-00', {selectOnFocus: true, placeholder: "(___) ___-__-__"});
+	$('input[type=tel]').mask('+7 (000) 000-00-00');
 	$('.sourceUrl').val(location.href);
 
 	$(".wpcf7").on('wpcf7:submit', function (event) {

@@ -4032,7 +4032,7 @@ h2 {
 		);
 	}
 	.d3_img {
-		min-width: 320px;
+		/* min-width: 320px; */
 		max-width: 100%;
 		/* height: 397px; */
 		object-fit: contain;
@@ -4099,6 +4099,9 @@ h2 {
 	}
 }
 @media (max-width: 641px) {
+	.title__line {
+		padding-bottom: 15px;
+	}
 	.hero {
 		padding-bottom: 70px;
 	}
