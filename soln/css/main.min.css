@@ -3874,6 +3874,7 @@ h2 {
 }
 
 .title__line {
+	width: 100%;
 	padding-bottom: 30px;
 	border-bottom: 1.5px solid #ebeced;
 }
@@ -4001,7 +4002,8 @@ h2 {
 		/* padding-top: 0; */
 	}
 	.layout {
-		padding-top: 28px;
+		/* padding-top: 28px; */
+		padding-top: 0;
 	}
 	.advantages {
 		padding-top: 28px;
@@ -4069,6 +4071,9 @@ h2 {
 }
 .layout__desktop {
 	/* padding: 60px 0; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 @media (max-width: 1359px) {
 	.tour__images__section--small {
