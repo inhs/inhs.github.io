@@ -1011,6 +1011,8 @@ h2 {
 	height: 171px;
 	-ms-flex-pack: distribute;
 	justify-content: space-around;
+}
+@media (max-width: 768px) {
 	margin-top: -83px;
 }
 
@@ -1526,8 +1528,8 @@ h2 {
 }
 
 .tour {
-	padding-bottom: 0;
-	padding-top: 30px;
+	padding: 60px 0;
+	padding-bottom: 30px;
 }
 
 .tour__title {
@@ -1884,7 +1886,7 @@ h2 {
 }
 
 .advantages {
-	padding-top: 30px;
+	padding: 60px 0;
 	padding-bottom: 0;
 }
 
@@ -2070,8 +2072,7 @@ h2 {
 }
 
 .reviews {
-	padding-bottom: 30px;
-	padding-top: 30px;
+	padding: 60px 0;
 }
 
 .reviews__title {
@@ -2333,8 +2334,8 @@ h2 {
 }*/
 
 .about {
-	padding-bottom: 59px;
-	/* padding-top: 30px; */
+	padding-bottom: 60px;
+	padding-top: 60px;
 }
 
 .about__title {
@@ -3464,7 +3465,7 @@ h2 {
 	}
 	.form__wrap {
 		padding: 23px 23px 36px;
-		box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 	}
 
 	.form__wrap:before {
@@ -3860,7 +3861,7 @@ h2 {
 		color: black;
 	}
 	.form__unit input {
-		width: 80%;
+		width: 100%;
 	}
 	/*.form__text {
 	font-size: 18px;
@@ -3904,9 +3905,9 @@ h2 {
 		margin-right: 30px;
 	}
 	.d3_img {
-		-webkit-transform: rotate(90deg);
-		transform: rotate(90deg);
-		width: 560px;
+		/* -webkit-transform: rotate(90deg);
+		transform: rotate(90deg); */
+		/* width: 560px; */
 	}
 }
 
@@ -3977,9 +3978,15 @@ h2 {
 }
 .other__custom {
 	/* margin-top: 50px; */
-	padding-bottom: 27px;
+	/* padding-bottom: 27px; */
+	padding: 60px 0;
 }
-
+.d3__img__wrap {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	object-fit: cover;
+}
 @media screen and (max-width: 640px) and (min-width: 320px) {
 	.hero {
 		margin-bottom: 40px;
@@ -3988,7 +3995,7 @@ h2 {
 		margin-bottom: 10px;
 	}
 	.tour {
-		padding-top: 0;
+		/* padding-top: 0; */
 	}
 	.layout {
 		padding-top: 28px;
@@ -4024,7 +4031,7 @@ h2 {
 	.d3_img {
 		min-width: 320px;
 		max-width: 100%;
-		height: 397px;
+		/* height: 397px; */
 		object-fit: contain;
 	}
 	.nav__mobile {
@@ -4044,10 +4051,14 @@ h2 {
 	padding: 30px 15px;
 }
 .reviews._first {
-	padding-top: 0;
+	padding-top: 60px;
+	padding-bottom: 30px;
 }
 .tour__images__section__unit._modify {
 	height: 528px;
+}
+.layout__desktop {
+	/* padding: 60px 0; */
 }
 @media (max-width: 1359px) {
 	.tour__images__section--small {
@@ -4066,11 +4077,14 @@ h2 {
 		margin-bottom: 30px;
 	}
 	.tour__images__section__unit {
-		height: 100%!important;
+		height: 100% !important;
 	}
 }
-@media (max-width: 640px) {
+@media (max-width: 641px) {
 	.hero {
 		padding-bottom: 70px;
+	}
+	.advantages__cards {
+		justify-content: space-around;
 	}
 }
