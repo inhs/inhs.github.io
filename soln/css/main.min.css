@@ -1112,6 +1112,7 @@ h2 {
 
 	.footer__logo__container {
 		width: 218px;
+		margin-top: -82px;
 	}
 
 	.footer__info {
@@ -3903,7 +3904,10 @@ h2 {
 		height: 528px;
 	}
 }
-
+.d3_img {
+	width: 450px;
+	object-fit: contain;
+}
 @media screen and (max-width: 1920px) and (min-width: 1360px) {
 	.other__unit:nth-child(4n) {
 		margin-right: 30px;
@@ -4113,4 +4117,9 @@ h2 {
 	.advantages__cards {
 		justify-content: space-around;
 	}
+	.d3_img {
+		width: 350px;
+		object-fit: contain;
+	}
 }
+
