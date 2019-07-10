@@ -1,0 +1,18 @@
+.navigation {
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	&__items {
+		margin: 0 1rem;
+	}
+	&__link {
+		@extend .fl;
+		font-size: 1.4rem;
+		color: #fff;
+		transition: .2s;
+		&:hover {
+			color: $mainC;
+		}
+	}
+}

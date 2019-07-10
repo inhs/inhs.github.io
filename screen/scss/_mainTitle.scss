@@ -1,0 +1,13 @@
+.mainTitle {
+	width: 100%;
+	@extend .fb;
+	font-size: 5rem;
+	text-transform: uppercase;
+	color: #fff;
+	&__accent {
+		font-family: inherit;
+		font-size: inherit;
+		color: $blueC;
+		text-transform: uppercase;
+	}
+}

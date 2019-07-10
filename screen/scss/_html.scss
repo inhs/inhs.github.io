@@ -1,0 +1,27 @@
+html {
+	font-size: 10px;
+	@include media(1081px) {
+		font-size: calc(100vw/130);
+	}
+	@include media(551px) {
+		font-size: calc(100vw/50);
+	}
+}
+* {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-decoration: none;
+	outline: none;
+	line-height: normal;
+	border: none;
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+	letter-spacing: unset;
+	font-weight: 400;
+	font-family: "FiraSans Regular";
+	color: inherit;
+	box-sizing: border-box;
+	text-size-adjust: none;
+}

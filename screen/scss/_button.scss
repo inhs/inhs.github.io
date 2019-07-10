@@ -1,0 +1,14 @@
+.button {
+	font-size: 1.6rem;
+	color: #fff;
+	padding: 2.5rem 8rem;
+	background: $mainC;
+	border-radius: 36rem;
+	border-bottom: .4rem solid darken($mainC, 10%);
+	text-transform: uppercase;
+	box-shadow: 0 1rem 1.8rem rgba(253, 97, 19, 0.5), 0 .5rem 0 #e64c00;
+	cursor: pointer;
+	&._big {
+		font-size: 1.9rem;
+	}
+}
