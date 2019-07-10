@@ -1,0 +1,6 @@
+.wrapper {
+	width: 135rem;
+	@include media(551px) {
+		width: 90vw;
+	}
+}

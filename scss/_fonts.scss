@@ -1,0 +1,25 @@
+@font-face {
+	font-family: "SegoeUI Light";
+	font-display: auto;
+	src: url("../fonts/SegoeUI-Light.woff");
+}
+@font-face {
+	font-family: "SegoeUI Regular";
+	font-display: auto;
+	src: url("../fonts/SegoeUI.woff");
+}
+@font-face {
+	font-family: "SegoeUI SemiBold";
+	font-display: auto;
+	src: url("../fonts/SegoeUI-SemiBold.woff");
+}
+
+.fl {
+	font-family: "SegoeUI Light";
+}
+.fm {
+	font-family: "SegoeUI Regular";
+}
+.fsb {
+	font-family: "SegoeUI SemiBold";
+}

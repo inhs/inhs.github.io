@@ -1,0 +1,33 @@
+.body {
+	&__bg {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 120rem;
+			height: 120rem;
+			background: transparent;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+		}
+		&::before {
+			margin-left: 40rem;
+			background: url('../img/blueEllipse.svg') no-repeat center;
+			background-size: contain;
+			opacity: 0.3;
+		}
+		&::after {
+			margin-left: -45rem;
+			background: url('../img/redEllipse.svg') no-repeat center;
+			background-size: contain;
+			opacity: 0.3;
+		}
+	}
+}

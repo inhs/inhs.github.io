@@ -1,0 +1,12 @@
+$redColor: #ff044f;
+$blueColor: #3063ff;
+@mixin media($w) {
+	@media screen and (max-width: $w) {
+		@content;
+	}
+}
+.fadeElem {
+	visibility: visible;
+	opacity: 1;
+	transform: translate(0);
+}
