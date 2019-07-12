@@ -1,0 +1,19 @@
+.feature {
+	width: 100%;
+	background: #fff;
+	border-radius: .5rem;
+	box-shadow: 0rem .8rem 1rem -.5rem rgba(0,0,0,.2);
+	padding: 1rem;
+	&__title {
+		@extend .fb;
+		width: 100%;
+		font-size: 2.1rem;
+		line-height: 1.55;
+		margin-bottom: 1rem;
+	}
+	&__text {
+		width: 100%;
+		font-size: 1.5rem;
+		line-height: 1.55;
+	}
+}

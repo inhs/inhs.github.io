@@ -1,0 +1,63 @@
+.sectionServices {
+	@extend .section;
+	position: relative;
+	overflow: hidden;
+	&__wrapper {
+		@extend .wrapper;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 6rem 0;
+		position: relative;
+	}
+	&__title {
+		margin-bottom: 6rem;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -1rem;
+			left: 0;
+			height: 0.2rem;
+			background: $blueC;
+			width: 14rem;
+		}
+	}
+	&__list {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__items {
+		width: 31%;
+		margin-bottom: 4rem;
+	}
+	&__bgElem {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		&._cam {
+			width: 50rem;
+			opacity: 0.1;
+			top: 0;
+			transform: rotate(-20deg) translateX(-50%);
+			margin-left: 45rem;
+			margin-top: -5rem;
+		}
+		&._videocam {
+			width: 50rem;
+			opacity: 0.1;
+			top: 33%;
+			transform: rotate(-20deg) translateX(-50%);
+			margin-left: -57rem;
+		}
+		&._photocam {
+			width: 80rem;
+			bottom: 0;
+			transform: translateX(-50%);
+			margin-left: 37rem;
+		}
+	}
+}

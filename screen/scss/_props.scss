@@ -1,0 +1,11 @@
+.props {
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	&__items {
+		@extend .fl;
+		font-size: 1.9rem;
+		margin: 0 2.5rem;
+	}
+}

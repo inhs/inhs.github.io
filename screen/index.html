@@ -6,43 +6,100 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Document</title>
+	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/style.css?<?= filemtime('css/style.css') ?>" />
 </head>
 
 <body class="body">
+
+	<div class="JSmodal body__requestCall" data-modal="requestCall">
+		<div class="requestCall">
+			<div class="requestCall__form">
+				<div class="form">
+					<img src="img/cancel.svg" alt="" class="JSmodalToggle modalClose" data-modal="requestCall">
+					<p class="form__title">
+						Заполните форму
+					</p>
+					<div class="form__input">
+						<div class="input">
+							<input type="text" name="name" placeholder="Ваше имя" class="input__input">
+							<img src="img/name.png" alt="" class="input__icon">
+						</div>
+					</div>
+					<div class="form__input">
+						<div class="input">
+							<input type="tel" name="phone" placeholder="Ваш телефон" class="phoneMask input__input">
+							<img src="img/phone.png" alt="" class="input__icon _phone">
+						</div>
+					</div>
+					<div class="form__button">
+						<div class="button _big">
+							заказать
+						</div>
+					</div>
+					<div class="form__conf">
+						<img src="img/tick.png" alt="" class="form__tick">
+						<p class="form__text">
+							Даю согласие на обработку моих <span class="form__link">персональных данных</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="JSmodal body__videoModal" data-modal="videoModal">
+		<div class="videoModal">
+			<div class="videoModal__container">
+				<img src="img/cancel.svg" alt="" class="JSmodalToggle modalClose" data-modal="videoModal">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/sRZ9Mw_g4vk" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="JSmodal body__serviceModal" data-modal="serviceModal">
+		<div class="serviceModal">
+			<div class="serviceModal__container">
+				<div class="serviceModal__title">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<header class="header" data-vide-bg='img/video.mp4' data-vide-options="loop: true, muted: true, position: 50% 50%">
 		<div class="header__wrapper">
 			<div class="header__topLine">
 				<img src="img/logo.png" alt="" class="header__logo">
 				<div class="header__navigation">
-						<ul class="navigation">
-								<li class="navigation__items">
-									<a href="3" class="navigation__link">
-										Услуги и цены
-									</a>
-								</li>
-								<li class="navigation__items">
-									<a href="3" class="navigation__link">
-										Портфолио
-									</a>
-								</li>
-								<li class="navigation__items">
-									<a href="3" class="navigation__link">
-										Преимущества
-									</a>
-								</li>
-								<li class="navigation__items">
-									<a href="3" class="navigation__link">
-										Отзывы
-									</a>
-								</li>
-								<li class="navigation__items">
-									<a href="3" class="navigation__link">
-										Контакты
-									</a>
-								</li>
-							</ul>
-							
+					<!-- <?php include "core/navigation.php" ?> -->
+					<ul class="navigation">
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Услуги и цены
+								</a>
+							</li>
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Портфолио
+								</a>
+							</li>
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Преимущества
+								</a>
+							</li>
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Отзывы
+								</a>
+							</li>
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Контакты
+								</a>
+							</li>
+						</ul>
+						
 				</div>
 				<div class="header__socialLinks">
 					<ul class="socialLinks">
@@ -66,7 +123,7 @@
 				<div class="header__contacts">
 					<a href="tel:+79651121447" class="header__phoneLink">+7 (965) 112-14-47</a>
 					<a href="mailto:info@andreysnopkov.com" class="header__emailLink">info@andreysnopkov.com</a>
-					<p class="header__requestCall">Заказать звонок</p>
+					<p class="JSmodalToggle header__requestCall" data-modal="requestCall">Заказать звонок</p>
 				</div>
 			</div>
 			<div class="header__bottomLine">
@@ -81,7 +138,7 @@
 					</p>
 					<div class="header__line">
 						<div class="header__button">
-							<div class="button">
+							<div class="button _big">
 								Обсудить проект
 							</div>
 						</div>
@@ -92,7 +149,7 @@
 					</div>
 				</div>
 				<div class="header__video">
-					<div class="header__playBtn">
+					<div class="JSmodalToggle header__playBtn" data-modal="videoModal">
 						<img src="img/play.svg" alt="" class="header__playIcon">
 					</div>
 					<p class="header__smallInfo _tac">
@@ -105,10 +162,953 @@
 			</div>
 		</div>
 	</header>
+
+	<section class="sectionServices">
+		<img src="img/camera.svg" alt="" class="sectionServices__bgElem _cam">
+		<img src="img/videocam.svg" alt="" class="sectionServices__bgElem _videocam">
+		<img src="img/fotocam.png" alt="" class="sectionServices__bgElem _photocam">
+		<div class="sectionServices__wrapper">
+			<div class="sectionServices__title">
+				<h2 class="title">
+					Наши <span class="title__accent">услуги</span>
+				</h2>
+			</div>
+			<!-- /////////////// sectionServices__list /////////////// -->
+			<div class="sectionServices__list">
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+				<div class="sectionServices__items">
+					<div class="service">
+						<div class="service__top">
+							<img src="img/service1.png" alt="" class="service__img">
+							<p class="service__name">
+								Видеоролик о вашей компании
+							</p>
+						</div>
+						<div class="service__bottom">
+							<p class="service__price"><span class="accent">150</span> тыс. руб.</p>
+							<div class="service__button">
+								<div class="button">
+									подробнее
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionServices__items -->
+			</div>
+		</div>
+	</section>
+
+	<section class="sectionPortfolio">
+		<img src="img/portfoliobg1.png" alt="" class="sectionPortfolio__bgElem _left">
+		<img src="img/portfoliobg2.png" alt="" class="sectionPortfolio__bgElem _right">
+		<div class="sectionPortfolio__wrapper">
+			<div class="sectionPortfolio__title">
+				<h2 class="title">
+					Наше <span class="title__accent">портфолио</span>
+				</h2>
+			</div>
+			<p class="sectionPortfolio__subTitle">
+				Мы снимали видео о добыче угля, уходе за окнами, корпоративы, бизнес-тренинги, тысячи интервью
+			</p>
+			<div class="sectionPortfolio__switcher">
+				<div class="switcher">
+					<div class="JSswitcher switcher__items _active" data-switch="video">
+						Видео
+					</div>
+					<div class="JSswitcher switcher__items" data-switch="photo">
+						Фотографии
+					</div>
+				</div>
+			</div>
+			<!--  //////////// sectionPortfolio__list //////////// -->
+			<div class="JSportfolioList sectionPortfolio__list _active" data-switch="video">
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardVideo">
+						<img src="img/preview1.png" alt="" class="cardVideo__img">
+						<p class="cardVideo__name">
+							15 Международная выставка
+							"Нефть и газ" / MIOGE Часть2
+						</p>
+						<p class="cardVideo__time">
+							2 мин 37 сек.
+						</p>
+						<div class="cardVideo__playBtn">
+							<div class="playBtn">
+								<img src="img/play.svg" alt="" class="playBtn__icon">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardVideo">
+						<img src="img/preview2.png" alt="" class="cardVideo__img">
+						<p class="cardVideo__name">
+							Лаборатория МЕТАКЛЭЙ в Сколково
+						</p>
+						<p class="cardVideo__time">
+							2 мин 37 сек.
+						</p>
+						<div class="cardVideo__playBtn">
+							<div class="playBtn">
+								<img src="img/play.svg" alt="" class="playBtn__icon">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardVideo">
+						<img src="img/preview1.png" alt="" class="cardVideo__img">
+						<p class="cardVideo__name">
+							15 Международная выставка
+							"Нефть и газ" / MIOGE Часть2
+						</p>
+						<p class="cardVideo__time">
+							2 мин 37 сек.
+						</p>
+						<div class="cardVideo__playBtn">
+							<div class="playBtn">
+								<img src="img/play.svg" alt="" class="playBtn__icon">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardVideo">
+						<img src="img/preview2.png" alt="" class="cardVideo__img">
+						<p class="cardVideo__name">
+							Лаборатория МЕТАКЛЭЙ в Сколково
+						</p>
+						<p class="cardVideo__time">
+							2 мин 37 сек.
+						</p>
+						<div class="cardVideo__playBtn">
+							<div class="playBtn">
+								<img src="img/play.svg" alt="" class="playBtn__icon">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardVideo">
+						<img src="img/preview1.png" alt="" class="cardVideo__img">
+						<p class="cardVideo__name">
+							15 Международная выставка
+							"Нефть и газ" / MIOGE Часть2
+						</p>
+						<p class="cardVideo__time">
+							2 мин 37 сек.
+						</p>
+						<div class="cardVideo__playBtn">
+							<div class="playBtn">
+								<img src="img/play.svg" alt="" class="playBtn__icon">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardVideo">
+						<img src="img/preview2.png" alt="" class="cardVideo__img">
+						<p class="cardVideo__name">
+							Лаборатория МЕТАКЛЭЙ в Сколково
+						</p>
+						<p class="cardVideo__time">
+							2 мин 37 сек.
+						</p>
+						<div class="cardVideo__playBtn">
+							<div class="playBtn">
+								<img src="img/play.svg" alt="" class="playBtn__icon">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardVideo">
+						<img src="img/preview1.png" alt="" class="cardVideo__img">
+						<p class="cardVideo__name">
+							15 Международная выставка
+							"Нефть и газ" / MIOGE Часть2
+						</p>
+						<p class="cardVideo__time">
+							2 мин 37 сек.
+						</p>
+						<div class="cardVideo__playBtn">
+							<div class="playBtn">
+								<img src="img/play.svg" alt="" class="playBtn__icon">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardVideo">
+						<img src="img/preview2.png" alt="" class="cardVideo__img">
+						<p class="cardVideo__name">
+							Лаборатория МЕТАКЛЭЙ в Сколково
+						</p>
+						<p class="cardVideo__time">
+							2 мин 37 сек.
+						</p>
+						<div class="cardVideo__playBtn">
+							<div class="playBtn">
+								<img src="img/play.svg" alt="" class="playBtn__icon">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+			</div>
+			<!--  //////////// sectionPortfolio__list //////////// -->
+			<div class="JSportfolioList sectionPortfolio__list " data-switch="photo">
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardPhoto">
+						<img src="img/preview1.png" alt="" class="cardPhoto__photo">
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardPhoto">
+						<img src="img/preview2.png" alt="" class="cardPhoto__photo">
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardPhoto">
+						<img src="img/preview1.png" alt="" class="cardPhoto__photo">
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardPhoto">
+						<img src="img/preview2.png" alt="" class="cardPhoto__photo">
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardPhoto">
+						<img src="img/preview1.png" alt="" class="cardPhoto__photo">
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardPhoto">
+						<img src="img/preview2.png" alt="" class="cardPhoto__photo">
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardPhoto">
+						<img src="img/preview1.png" alt="" class="cardPhoto__photo">
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+				<div class="JSportfolioItems sectionPortfolio__items">
+					<div class="cardPhoto">
+						<img src="img/preview2.png" alt="" class="cardPhoto__photo">
+					</div>
+				</div>
+				<!-- //sectionPortfolio__items -->
+			</div>
+			<div class="JSportfolioMoreBtn sectionPortfolio__button">
+				<div class="button _big">
+					Посмотреть большое работ
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sectionForm">
+		<img src="img/sectionFormMan.png" alt="" class="sectionForm__bgElem _man">
+		<div class="sectionForm__wrapper">
+			<img src="img/journal.png" alt="" class="sectionForm__bgElem _journal">
+			<div class="sectionForm__text">
+				<div class="sectionForm__title">
+					<h2 class="title _white">
+						Узнайте подробней <br>
+						о нас и
+						<span class="title__accent">
+							получите
+							предложение <br>
+							о наших услугах
+						</span>
+					</h2>
+				</div>
+				<div class="sectionForm__signature">
+					<img src="img/podpis.png" alt="" class="signature">
+				</div>
+			</div>
+			<div class="sectionForm__form">
+				<div class="form">
+					<p class="form__title">
+						Заполните форму и скачайте
+					</p>
+					<p class="form__title _accent">
+						коммерческое предложение
+					</p>
+					<div class="form__input">
+						<div class="input">
+							<input type="text" name="name" placeholder="Ваше имя" class="input__input">
+							<img src="img/name.png" alt="" class="input__icon">
+						</div>
+					</div>
+					<div class="form__input">
+						<div class="input">
+							<input type="tel" name="phone" placeholder="Ваш телефон" class="phoneMask input__input">
+							<img src="img/phone.png" alt="" class="input__icon _phone">
+						</div>
+					</div>
+					<div class="form__input">
+						<div class="input">
+							<input type="text" name="email" placeholder="Ваш e-mail" class="input__input">
+							<img src="img/mail.png" alt="" class="input__icon _mail">
+						</div>
+					</div>
+					<div class="form__button">
+						<div class="button _big">
+							скачать предложение
+						</div>
+					</div>
+					<div class="form__conf">
+						<img src="img/tick.png" alt="" class="form__tick">
+						<p class="form__text">
+							Даю согласие на обработку моих <span class="form__link">персональных данных</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sectionFeatures">
+		<div class="sectionFeatures__wrapper">
+			<div class="sectionFeatures__title">
+				<h2 class="title">
+					Оцените <span class="title__accent">наши премущества</span>
+				</h2>
+			</div>
+			<p class="sectionFeatures__subTitle">
+				Наши клиенты получают видео через 7 дней после съемок
+			</p>
+			<div class="sectionFeatures__container">
+				<div class="sectionFeatures__line _1">
+					<div class="sectionFeatures__items _1">
+						<div class="feature">
+							<p class="feature__title">
+								Работа по договору <br>
+								и возможность постоплаты
+							</p>
+							<p class="feature__text">
+								Мы учитываем все юридические особенности использования и съемки, а также вопросы авторских прав
+								готовых работ и использующихся составляющих (иллюстрации, звуковые файлы.
+							</p>
+						</div>
+					</div>
+					<div class="sectionFeatures__items _2">
+						<div class="feature">
+							<p class="feature__title">
+								Собственная студия <br>
+								в центре Москвы
+							</p>
+							<p class="feature__text">
+								Наша студия это просторное творческое пространство с возможностью круглосуточного доступа,
+								полностью оборудованное под профессиональную фото и видео съемку. Аренда нашей студии для наших
+								клиентов бесплатна!
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="sectionFeatures__line _2">
+					<div class="sectionFeatures__items _3">
+						<div class="feature">
+							<p class="feature__title">
+								Круглосуточная работа
+							</p>
+							<p class="feature__text">
+								Мы готовы работать над вашими проектами в любое удобное время суток, даже если съемки нужно
+								проводить ночью, а подготовку к мероприятию и настройку оборудования нужно начать рано утро
+							</p>
+						</div>
+					</div>
+					<div class="sectionFeatures__items _4">
+						<div class="feature">
+							<p class="feature__title">
+								Собственное оборудование
+							</p>
+							<p class="feature__text">
+								Камеры FULLHD формата, и возможность съемки в 4К, квадрокоптеры, съемочный кран, слайдер,
+								стабилизаторы, видеосвет, звуковое оборудование, экшен-камеры, камера 360, интерактивная доска,
+								проектор
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="sectionFeatures__line _3">
+					<div class="sectionFeatures__items _5">
+						<div class="feature">
+							<p class="feature__title">
+								Большой опыт работы
+							</p>
+							<p class="feature__text">
+								Мы работаем с бизнес-клиентами более 10 лет За это время мы создали более 1000 видео, провели
+								более 100 трансляций. Наши фото размещены в журналах и книгах, а видео используют на сайтах и
+								YouTube крупнейшие компании.
+							</p>
+						</div>
+					</div>
+					<div class="sectionFeatures__items _6">
+						<div class="feature">
+							<p class="feature__title">
+								Постоянная команда
+							</p>
+							<p class="feature__text">
+								В нашу команду входят видеооператоры, режиссеры, монтажеры, моушн дизайнеры, переводчик и
+								сценаристы, менеджеры проектов.
+								Мы привлекаем к работе актеров, стилистов и визажистов
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sectionClients">
+		<div class="sectionClients__wrapper">
+			<div class="sectionClients__title">
+				<h2 class="title">
+					<span class="title__accent">Наши клиенты - </span> самые лучшие!
+				</h2>
+			</div>
+			<div class="sectionClients__slider">
+				<div class="slider">
+					<img src="img/next-button.svg" alt="" class="slider__btn _prev prevSlide1">
+					<div class="JSslickSlider1 slider__list">
+						<div class="slider__items">
+							<div class="slider__itemCard">
+								<img src="img/slider1.png" alt="" class="slider__img">
+							</div>
+							<p class="slider__itemName">
+								Производство пленки
+							</p>
+						</div>
+						<div class="slider__items">
+							<div class="slider__itemCard">
+								<img src="img/slider2.png" alt="" class="slider__img">
+							</div>
+							<p class="slider__itemName">
+								Производство оборудования для
+								нефтегазовой отрасли
+							</p>
+						</div>
+						<div class="slider__items">
+							<div class="slider__itemCard">
+								<img src="img/slider3.png" alt="" class="slider__img">
+							</div>
+							<p class="slider__itemName">
+								Чугунолитейная компания
+							</p>
+						</div>
+						<div class="slider__items">
+							<div class="slider__itemCard">
+								<img src="img/slider4.png" alt="" class="slider__img">
+							</div>
+							<p class="slider__itemName">
+								Производство алюминиевого
+								профиля
+							</p>
+						</div>
+						<div class="slider__items">
+							<div class="slider__itemCard">
+								<img src="img/slider1.png" alt="" class="slider__img">
+							</div>
+							<p class="slider__itemName">
+								Производство пленки
+							</p>
+						</div>
+					</div>
+					<img src="img/next-button.svg" alt="" class="slider__btn _next nextSlide1">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sectionReviews">
+		<div class="sectionReviews__wrapper">
+			<div class="sectionReviews__title">
+				<h2 class="title _white">
+					<span class="title__accent">Отзывы</span> наших клиентов
+				</h2>
+			</div>
+			<div class="sectionReviews__slider">
+				<div class="slider">
+					<img src="img/next-button.svg" alt="" class="slider__btn _2 _prev prevSlide2">
+					<div class="JSslickSlider2 slider__list">
+						<div class="slider__reviewCard">
+							<div class="reviewCard">
+								<div class="reviewCard__photoWrap">
+									<img src="img/review1.png" alt="" class="reviewCard__photo">
+								</div>
+								<p class="reviewCard__name">
+									Вероника Довгань
+								</p>
+								<p class="reviewCard__post">
+									Газпром СтройТЭК
+								</p>
+								<p class="reviewCard__text">
+									Андрей - настоящий профессионал своего дела, креативный, инициативный, тонкий и понимающий
+									человек, потрясающий фотограф и мастер видеопроизводства!
+								</p>
+							</div>
+						</div>
+						<div class="slider__reviewCard">
+							<div class="reviewCard">
+								<div class="reviewCard__photoWrap">
+									<img src="img/review2.png" alt="" class="reviewCard__photo">
+								</div>
+								<p class="reviewCard__name">
+									Наталья Шааб
+								</p>
+								<p class="reviewCard__post">
+									Центр Харизма
+								</p>
+								<p class="reviewCard__text">
+									Если про технические аспекты нашего сотрудничества, то ни одной, даже мелкой "непонимашки" не
+									было ни разу за 5 лет!
+								</p>
+							</div>
+						</div>
+						<div class="slider__reviewCard">
+							<div class="reviewCard">
+								<div class="reviewCard__photoWrap">
+									<img src="img/review3.png" alt="" class="reviewCard__photo">
+								</div>
+								<p class="reviewCard__name">
+									Александр Китаев-Смык
+								</p>
+								<p class="reviewCard__post">
+									AGC
+								</p>
+								<p class="reviewCard__text">
+									Для наших проектов команда Андрея решает, пожалуй, главную задачу: эффективно передать
+									информацию
+									в подсознание клиентов через эмоциональный канал восприятия. Андрей делает это мастерски!
+									Ярко!
+								</p>
+							</div>
+						</div>
+						<div class="slider__reviewCard">
+							<div class="reviewCard">
+								<div class="reviewCard__photoWrap">
+									<img src="img/review1.png" alt="" class="reviewCard__photo">
+								</div>
+								<p class="reviewCard__name">
+									Вероника Довгань
+								</p>
+								<p class="reviewCard__post">
+									Газпром СтройТЭК
+								</p>
+								<p class="reviewCard__text">
+									Андрей - настоящий профессионал своего дела, креативный, инициативный, тонкий и понимающий
+									человек, потрясающий фотограф и мастер видеопроизводства!
+								</p>
+							</div>
+						</div>
+					</div>
+					<img src="img/next-button.svg" alt="" class="slider__btn _2 _next nextSlide2">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sectionSale">
+		<div class="sectionSale__wrapper">
+			<div class="sectionSale__title">
+				<h2 class="title">
+					Хотите получить <br> <span class="title__accent">скидку 10%?</span>
+				</h2>
+			</div>
+			<div class="sectionSale__bigForm">
+				<div class="bigForm">
+					<p class="bigForm__title">
+						Опишите вашу задачу, <span class="accent">заполнив форму ниже</span>
+					</p>
+					<div class="bigForm__line">
+						<div class="bigForm__smallInput">
+							<div class="input">
+								<input type="text" name="name" placeholder="Ваше имя" class="input__input">
+								<img src="img/name.png" alt="" class="input__icon">
+							</div>
+						</div>
+						<div class="bigForm__smallInput">
+							<div class="input">
+								<input type="text" name="phone" placeholder="Ваш телефон" class="phoneMask input__input">
+								<img src="img/phone.png" alt="" class="input__icon _phone">
+							</div>
+						</div>
+						<div class="bigForm__smallInput">
+							<div class="input">
+								<input type="text" name="email" placeholder="Ваш e-mail" class="input__input">
+								<img src="img/mail.png" alt="" class="input__icon _mail">
+							</div>
+						</div>
+					</div>
+					<div class="bigForm__textarea">
+						<div class="input">
+							<textarea name="desc" cols="30" rows="10" placeholder="Описание содержания видео и задачи"
+								class="input__area"></textarea>
+						</div>
+					</div>
+					<div class="bigForm__line">
+						<div class="bigForm__input">
+							<div class="input">
+								<input type="text" name="where" placeholder="Где будет использоваться видео
+								" class="input__input">
+								<img src="img/where.png" alt="" class="input__icon">
+							</div>
+						</div>
+						<div class="bigForm__input">
+							<div class="input">
+								<input type="text" name="time" placeholder="Какой срок готовности видео" class="input__input">
+								<img src="img/time.png" alt="" class="input__icon">
+							</div>
+						</div>
+					</div>
+					<div class="bigForm__line">
+						<div class="bigForm__input">
+							<div class="input">
+								<input type="text" name="price" placeholder="Бюджет вашей задачи" class="input__input">
+								<img src="img/coin.png" alt="" class="input__icon">
+							</div>
+						</div>
+						<div class="bigForm__input">
+							<div class="input">
+								<input type="text" name="link" placeholder="Вставьте ссылку на понравившиеся видео"
+									class="input__input">
+								<img src="img/unlink.png" alt="" class="input__icon _link">
+							</div>
+						</div>
+					</div>
+					<div class="bigForm__button">
+						<div class="button _big">
+							Отправить заявку
+						</div>
+					</div>
+					<div class="form__conf">
+						<img src="img/tick.png" alt="" class="form__tick">
+						<p class="form__text">
+							Даю согласие на обработку моих <span class="form__link">персональных данных</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="sectionMap">
+		<iframe src="https://yandex.ru/map-widget/v1/-/CCsF6FjT" width="100%" height="100%" frameborder="1"
+			allowfullscreen="true"></iframe>
+		<div class="sectionMap__contacts">
+			<div class="contacts">
+				<div class="contacts__items">
+					<img src="img/placeholder.png" alt="" class="contacts__icon">
+					<p class="contacts__text">
+						г. Москва, Переведеновский переулок 18стр2
+					</p>
+				</div>
+				<a href="mailto:info@andreysnopkov.com" class="contacts__items">
+					<img src="img/mail.png" alt="" class="contacts__icon">
+					<p class="contacts__text">
+						info@andreysnopkov.com
+					</p>
+				</a>
+				<a href="tel:+79651121447" class="contacts__items">
+					<img src="img/phone.png" alt="" class="contacts__icon">
+					<p class="contacts__text">
+						+ 7(965) 112 -14 -47
+					</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__topLine">
+			<div class="footer__wrapper _top">
+				<div class="footer__navigation">
+					<!-- <?php include "core/navigation.php" ?> -->
+					<ul class="navigation">
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Услуги и цены
+								</a>
+							</li>
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Портфолио
+								</a>
+							</li>
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Преимущества
+								</a>
+							</li>
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Отзывы
+								</a>
+							</li>
+							<li class="navigation__items">
+								<a href="3" class="navigation__link">
+									Контакты
+								</a>
+							</li>
+						</ul>
+						
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottomLine">
+			<div class="footer__wrapper _bottom">
+				<div class="footer__line">
+					<img src="img/logo-footer.png" alt="" class="footer__logo">
+					<div class="footer__contacts">
+						<a href="mailto:info@andreysnopkov.com" class="contacts__items _footer">
+							<img src="img/mail.png" alt="" class="contacts__icon _big">
+							<p class="contacts__text _big">
+								info@andreysnopkov.com
+							</p>
+						</a>
+						<a href="tel:+79651121447" class="contacts__items _footer">
+							<img src="img/phone.png" alt="" class="contacts__icon _big">
+							<p class="contacts__text _phone">
+								+7 (965) 112 -14 -47, +7 (915) 412 -17 -17
+							</p>
+						</a>
+					</div>
+					<div class="footer__socialLinks">
+						<ul class="socialLinks">
+							<li class="socialLinks__items">
+								<a href="#" class="socialLinks__link">
+									<img src="img/facebook.png" alt="" class="socialLinks__icon">
+								</a>
+							</li>
+							<li class="socialLinks__items">
+								<a href="#" class="socialLinks__link">
+									<img src="img/whatsapp.png" alt="" class="socialLinks__icon">
+								</a>
+							</li>
+							<li class="socialLinks__items">
+								<a href="#" class="socialLinks__link">
+									<img src="img/youtube.png" alt="" class="socialLinks__icon">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__props">
+					<div class="props">
+						<p class="props__items">
+							ИП Снопков Андрей Юрьевич
+						</p>
+						<p class="props__items">
+							ОГРНИП: 318547600137716
+						</p>
+						<p class="props__items">
+							ИНН: 540201021056
+						</p>
+					</div>
+				</div>
+				<p class="footer__copy">
+					© Студия Фото и Видео решений Андрея Снопкова
+				</p>
+				<div class="footer__smallInfo">
+					Разработано в <a href="" class="accent">rfim.ru</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/jquery.vide.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
 <script src="js/main.js?<?= filemtime('js/main.js') ?>"></script>
 
 </html>

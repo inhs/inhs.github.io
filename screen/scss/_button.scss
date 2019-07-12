@@ -1,14 +1,32 @@
 .button {
+	min-height: 6.4rem;
 	font-size: 1.6rem;
-	color: #fff;
-	padding: 2.5rem 8rem;
-	background: $mainC;
+	color: $mainC;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 8rem;
+	background: #fff;
 	border-radius: 36rem;
-	border-bottom: .4rem solid darken($mainC, 10%);
+	border: .1rem solid $mainC;
 	text-transform: uppercase;
-	box-shadow: 0 1rem 1.8rem rgba(253, 97, 19, 0.5), 0 .5rem 0 #e64c00;
+	transition: .2s;
+	white-space: nowrap;
 	cursor: pointer;
 	&._big {
 		font-size: 1.9rem;
+		border-bottom: .4rem solid darken($mainC, 10%);
+		box-shadow: 0 1rem 1.8rem 0rem rgba(253, 97, 19, 0.5);
+		background: $mainC;
+		color: #fff;
+		padding: 2.5rem 8rem;
+		&:hover {
+			box-shadow: 0 1rem 1.8rem 1rem rgba(253, 97, 19, 0.2);
+		}
+	}
+	&:hover {
+		box-shadow: 0 1rem 1.8rem 0rem rgba(253, 97, 19, 0.5);
+		background: $mainC;
+		color: #fff;
 	}
 }

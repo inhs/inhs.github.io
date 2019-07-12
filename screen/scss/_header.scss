@@ -20,30 +20,41 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 1rem 0;
-		margin-bottom: 10rem;
+		margin-bottom: 13rem;
 	}
 	&__logo {
 		width: 6.5rem;
+	}
+	&__navigation {
+		color: #fff;
+		font-size: 1.4rem;
 	}
 	&__contacts {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
+		margin-bottom: -3rem;
 	}
 	&__phoneLink {
 		@extend .fm;
 		font-size: 2.7rem;
 		color: #fff;
+		margin-bottom: 1rem;
 	}
 	&__emailLink {
 		@extend .fl;
 		font-size: 1.6rem;
 		color: #fff;
+		margin-bottom: 1rem;
 	}
 	&__requestCall {
+		position: relative;
 		@extend .fl;
 		color: $mainC;
 		font-size: 1.4rem;
+		border-bottom: .1rem dashed $mainC;
+		padding-bottom: .5rem;
+		cursor: pointer;
 	}
 	&__bottomLine {
 		width: 100%;
@@ -129,6 +140,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		margin-left: .2rem;
 	}
 }
 @keyframes pulse {

@@ -1,0 +1,12 @@
+.requestCall {
+	width: 100%;
+	min-height: 100vh;
+	background: rgba(0,0,0,.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__form {
+		width: 60rem;
+	}
+}

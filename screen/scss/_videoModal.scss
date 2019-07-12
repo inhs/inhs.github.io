@@ -1,0 +1,15 @@
+.videoModal {
+	width: 100%;
+	min-height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__container {
+		position: relative;
+		width: 80rem;
+		height: 45rem;
+		background: #fff;
+		border-radius: 0.5rem;
+	}
+}

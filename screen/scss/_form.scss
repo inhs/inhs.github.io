@@ -1,0 +1,55 @@
+.form {
+	width: 100%;
+	border-radius: 0.5rem;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem 2rem;
+	position: relative;
+	&__title {
+		@extend .fm;
+		font-size: 2.8rem;
+		color: #000;
+		margin-bottom: 0.5rem;
+		text-align: center;
+		&._accent {
+			color: $blueC;
+		}
+	}
+	&__input {
+		width: 90%;
+		margin: 1rem 0;
+	}
+	&__button {
+		width: 90%;
+		margin: 1rem 0 2rem 0;
+	}
+	&__conf {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	&__tick {
+		width: 2rem;
+		margin-right: 1rem;
+	}
+	&__text {
+		@extend .fl;
+		font-size: 1.3rem;
+		color: #000;
+		text-align: center;
+	}
+	&__link {
+		font-family: inherit;
+		font-size: inherit;
+		color: $mainC;
+	}
+	&__close {
+		width: 2rem;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,87 @@
+.sectionForm {
+	@extend .section;
+	position: relative;
+	background: url("../img/sectionFormBG.png") no-repeat center;
+	background-size: cover;
+	min-height: 77rem;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.9);
+	}
+	&__bgElem {
+		width: 55rem;
+		position: absolute;
+
+		&._man {
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			object-fit: contain;
+		}
+		&._journal {
+			width: 80rem;
+			bottom: -18rem;
+			left: -25rem;
+		}
+	}
+	&__wrapper {
+		@extend .wrapper;
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 6rem 0;
+	}
+	&__text {
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__title {
+		margin-bottom: 2rem;
+		position: relative;
+		&::before {
+			content: "";
+			width: 8rem;
+			height: 8rem;
+			position: absolute;
+			top: -3rem;
+			left: -3rem;
+			background: url("../img/left-quote.png") no-repeat center;
+			background-size: contain;
+		}
+		&::after {
+			content: "";
+			width: 8rem;
+			height: 8rem;
+			position: absolute;
+			bottom: -1rem;
+			right: 12rem;
+			background: url("../img/right-quote.png") no-repeat center;
+			background-size: contain;
+		}
+	}
+	&__signature {
+		width: 12rem;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -2rem;
+			left: 0;
+			width: 120%;
+			height: 0.2rem;
+			background: $blueC;
+		}
+	}
+	&__form {
+		width: 45rem;
+		margin: auto 0;
+	}
+}

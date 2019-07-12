@@ -1,0 +1,17 @@
+.title {
+	@extend .fb;
+	font-size: 3.6rem;
+	text-transform: uppercase;
+	color: #000000;
+	line-height: 1.35;
+	&__accent {
+		font-size: inherit;
+		text-transform: uppercase;
+		font-family: inherit;
+		color: $blueC;
+	}
+
+	&._white {
+		color: #fff;
+	}
+}

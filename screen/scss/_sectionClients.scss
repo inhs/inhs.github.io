@@ -1,0 +1,28 @@
+.sectionClients {
+	@extend .section;
+
+	&__wrapper {
+		@extend .wrapper;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 6rem 0;
+		padding-bottom: 10rem;
+	}
+	&__title {
+		margin-bottom: 5rem;
+		position: relative;
+		&::before {
+			content: '';
+			width: 17rem;
+			height: 0.2rem;
+			position: absolute;
+			bottom: -1rem;
+			left: 0;
+			background: $blueC;	
+		}
+	}
+	&__slider {
+		width: 100%;
+	}
+}

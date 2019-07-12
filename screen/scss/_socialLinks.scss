@@ -7,10 +7,6 @@
 	}
 	&__icon {
 		width: 4rem;
-		filter: grayscale(100%);
 		transition: .2s;
-		&:hover {
-			filter: grayscale(0);
-		}
 	}
 }

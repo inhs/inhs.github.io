@@ -1,3 +1,28 @@
 .body {
-	
+	&__requestCall {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+		display: none;
+		will-change: opacity;
+
+		&._active {
+			display: flex;
+		}
+	}
+	&__videoModal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 10;
+		display: none;
+		will-change: opacity;
+
+		&._active {
+			display: flex;
+		}
+	}
 }

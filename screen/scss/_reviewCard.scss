@@ -1,0 +1,44 @@
+.reviewCard {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #fff;
+	border-radius: .5rem;
+	padding: 0rem 2rem 4rem 2rem;
+	&__photoWrap {
+		width: 17rem;
+		height: 17rem;
+		border-radius: 50%;
+		position: relative;
+		margin-top: -8.5rem;
+		margin-bottom: 2rem;
+	}
+	&__photo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__name {
+		@extend .fm;
+		font-size: 2.4rem;
+		margin-bottom: 1rem;
+	}
+	&__post {
+		width: 100%;
+		font-size: 1.6rem;
+		color: $blueC;
+		margin-bottom: 2rem;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		box-shadow: 0rem 1rem 1rem -1rem rgba(0,0,0,.3);
+		padding-bottom: 2rem;
+	}
+	&__text {
+		width: 100%;
+		font-family: "FiraSans Italic";
+		font-size: 1.7rem;
+		text-align: center;
+	}
+}
