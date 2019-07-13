@@ -17,6 +17,12 @@
 			color: $blueC;
 		}
 	}
+	&__subTitle {
+		@extend .fl;
+		font-size: 1.7rem;
+		color: #000;
+		text-align: center;
+	}
 	&__input {
 		width: 90%;
 		margin: 1rem 0;

@@ -7,6 +7,9 @@
 	justify-content: center;
 
 	&__form {
-		width: 60rem;
+		width: 47rem;
+		@include media(551px) {
+			width: 90vw;
+		}
 	}
 }

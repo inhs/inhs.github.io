@@ -25,4 +25,19 @@
 			display: flex;
 		}
 	}
+	&__serviceModal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100vh;
+		max-height: 100%;
+		z-index: 10;
+		visibility: hidden;
+		will-change: opacity;
+		overflow-y: scroll;
+		&._active {
+			visibility: visible;
+		}
+	}
 }

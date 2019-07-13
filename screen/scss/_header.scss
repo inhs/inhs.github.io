@@ -1,6 +1,10 @@
 .header {
 	@extend .section;
 	min-height: 69rem;
+	overflow: hidden;
+	@include media(551px) {
+		min-height: 100vh;
+	}
 	&::before {
 		content: "";
 		position: absolute;
@@ -21,55 +25,95 @@
 		align-items: center;
 		padding: 1rem 0;
 		margin-bottom: 13rem;
+		@include media(551px) {
+			margin-bottom: 10rem;
+		}
 	}
 	&__logo {
 		width: 6.5rem;
 	}
 	&__navigation {
 		color: #fff;
-		font-size: 1.4rem;
+		font-size: 1.5rem;
+		@include media(551px) {
+			display: none;
+		}
+	}
+	&__socialLinks {
+		@include media(551px) {
+			display: none;
+		}
 	}
 	&__contacts {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
 		margin-bottom: -3rem;
+		@include media(551px) {
+			align-items: center;
+		}
+	}
+	&__menuBtn {
+		width: 5rem;
+		display: none;
+		@include media(551px) {
+			display: block;
+		}
 	}
 	&__phoneLink {
 		@extend .fm;
 		font-size: 2.7rem;
 		color: #fff;
 		margin-bottom: 1rem;
+		@include media(551px) {
+			font-size: 3rem;
+		}
 	}
 	&__emailLink {
 		@extend .fl;
 		font-size: 1.6rem;
 		color: #fff;
 		margin-bottom: 1rem;
+		@include media(551px) {
+			font-size: 2rem;
+		}
 	}
 	&__requestCall {
 		position: relative;
 		@extend .fl;
 		color: $mainC;
-		font-size: 1.4rem;
+		font-size: 1.5rem;
 		border-bottom: .1rem dashed $mainC;
 		padding-bottom: .5rem;
 		cursor: pointer;
+		@include media(551px) {
+			font-size: 2rem;
+		}
 	}
 	&__bottomLine {
 		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 	&__info {
 		width: 60%;
+		@include media(551px) {
+			width: 100%;
+			margin-bottom: 8rem;
+		}
 	}
 	&__video {
 		width: 40%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@include media(551px) {
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
 	}
 	&__title {
 		margin-bottom: 1rem;
@@ -79,22 +123,46 @@
 		font-size: 1.7rem;
 		color: #fff;
 		margin-bottom: 6rem;
+		@include media(551px) {
+			font-size: 2rem;
+			text-align: center;
+			margin-bottom: 3rem;
+		}
 	}
 	&__line {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
+		@include media(551px) {
+			justify-content: center;
+		}
 	}
 	&__button {
 		margin-right: 2rem;
+		@include media(551px) {
+			width: 80%;
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
 	}
 	&__smallInfo {
 		font-size: 1.5rem;
 		color: #dbdbdb;
 		&._tac {
 			text-align: center;
+			@include media(551px) {
+				width: 50%;
+				font-size: 2.2rem;
+				order: -1;
+				text-align: left;
+			}
 		}
 		.accent {
 			color: $blueC;
+		}
+		@include media(551px) {
+			font-size: 1.8rem;
+			text-align: center;
 		}
 	}
 	&__playBtn {
@@ -106,6 +174,10 @@
 		text-transform: uppercase;
 		box-shadow: 0 1rem 1.8rem rgba(253, 97, 19, 0.5);
 		position: relative;
+		@include media(551px) {
+			margin-bottom: 0;
+			margin-right: 4rem;
+		}
 		&::before {
 			content: "";
 			width: 9rem;

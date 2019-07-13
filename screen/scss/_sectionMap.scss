@@ -9,5 +9,10 @@
 		left: 50%;
 		transform: translate(-50%,-50%);
 		margin-left: -33rem;
+		@include media(551px) {
+			width: 34rem;
+			margin-left: -7rem;
+			margin-top: 11rem;
+		}
 	}
 }

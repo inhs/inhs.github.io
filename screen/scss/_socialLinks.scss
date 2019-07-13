@@ -8,5 +8,8 @@
 	&__icon {
 		width: 4rem;
 		transition: .2s;
+		@include media(551px) {
+			width: 5rem;
+		}
 	}
 }

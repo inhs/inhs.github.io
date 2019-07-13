@@ -1,7 +1,12 @@
+@mixin media($w) {
+	@media screen and (max-width: $w) {
+		@content;
+	}
+}
 html {
 	font-size: 10px;
-	@include media(1081px) {
-		font-size: calc(100vw/130);
+	@include media(1280px) {
+		font-size: calc(100vw/128);
 	}
 	@include media(551px) {
 		font-size: calc(100vw/50);

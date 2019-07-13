@@ -4,6 +4,8 @@
 	text-transform: uppercase;
 	color: #000000;
 	line-height: 1.35;
+	position: relative;
+	z-index: 1;
 	&__accent {
 		font-size: inherit;
 		text-transform: uppercase;
@@ -13,5 +15,8 @@
 
 	&._white {
 		color: #fff;
+	}
+	@include media(551px) {
+		font-size: 4.6rem;
 	}
 }

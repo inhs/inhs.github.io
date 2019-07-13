@@ -10,4 +10,7 @@
 		color: $blueC;
 		text-transform: uppercase;
 	}
+	@include media(551px) {
+		text-align: center;
+	}
 }

@@ -11,5 +11,9 @@
 		height: 45rem;
 		background: #fff;
 		border-radius: 0.5rem;
+		@include media(551px) {
+			width: 90vw;
+			height: 28rem;
+		}
 	}
 }

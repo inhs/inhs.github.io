@@ -1,7 +1,2 @@
 $mainC: #fe6519;
 $blueC: #008ea0;
-@mixin media($w) {
-	@media screen and (max-width: $w) {
-		@content;
-	}
-}
